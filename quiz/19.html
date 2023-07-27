@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/image.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style type="text/css">.panel-title>a:before{content:"\f068";float:right !important;position:relative;top:1px;display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1}.panel-title>a.collapsed:before{content:"\f067"}.panel-title>a{text-decoration:none;display:block}</style>
+    <title>19 - Advanced Identity</title>
+</head>
+<body>
+<h1 class="text-center">19 - Advanced Identity</h1>
+<div class="col-md-10 col-md-offset-1">
+    <div class="row">
+        <div class="col-md-12 help-block">
+            <a href="../index.html" class="btn btn-primary btn-block" role="button">Index</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 help-block">
+            <a target="_blank" href="../documents/AWS-Certified-Cloud-Practitioner-Slides-v2.5.pdf" class="btn btn-info btn-block" role="button">Slides v2.5</a>
+        </div>
+        <div class="col-md-3 help-block">
+            <a target="_blank" href="../documents/AWS-Certified-Cloud-Practitioner-Slides-v9.pdf" class="btn btn-info btn-block" role="button">Slides v9</a>
+        </div>
+        <div class="col-md-3 help-block">
+            <a target="_blank" href="../documents/AWS-Certified-Cloud-Practitioner-Slides-v10.pdf" class="btn btn-info btn-block" role="button">Slides v10</a>
+        </div>
+        <div class="col-md-3 help-block">
+            <a target="_blank" href="../documents/AWS-Certified-Cloud-Practitioner_Sample-Questions.pdf" class="btn btn-info btn-block" role="button">Sample Questions</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 help-block">
+            <a href="A.html" class="btn btn-warning btn-block" role="button">Activation Troubleshooting</a>
+        </div>
+        <div class="col-md-3 help-block">
+            <a href="B.html" class="btn btn-warning btn-block" role="button">Code & Slides Download</a>
+        </div>
+        <div class="col-md-3 help-block">
+            <a href="C.html" class="btn btn-warning btn-block" role="button">Practice Exam</a>
+        </div>
+        <div class="col-md-3 help-block">
+            <a href="D.html" class="btn btn-warning btn-block" role="button">Extra Practice Exams</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><a href="03.html" role="button">03 - What is Cloud Computing</a></div>
+        <div class="col-md-12"><a href="04.html" role="button">04 - Identity and Access Management</a></div>
+        <div class="col-md-12"><a href="05.html" role="button">05 - EC2</a></div>
+        <div class="col-md-12"><a href="06.html" role="button">06 - EC2 Instance Storage</a></div>
+        <div class="col-md-12"><a href="07.html" role="button">07 - ELB & ASG</a></div>
+        <div class="col-md-12"><a href="08.html" role="button">08 - S3</a></div>
+        <div class="col-md-12"><a href="09.html" role="button">09 - Databases & Analytics</a></div>
+        <div class="col-md-12"><a href="10.html" role="button">10 - Other Compute Services</a></div>
+        <div class="col-md-12"><a href="11.html" role="button">11 - Deployments & Managing Infrastructure at Scale in AWS</a></div>
+        <div class="col-md-12"><a href="12.html" role="button">12 - Leveraging the AWS Global Infrastructure</a></div>
+        <div class="col-md-12"><a href="13.html" role="button">13 - Cloud Integrations</a></div>
+        <div class="col-md-12"><a href="14.html" role="button">14 - Cloud Monitoring</a></div>
+        <div class="col-md-12"><a href="15.html" role="button">15 - VPC & Networking</a></div>
+        <div class="col-md-12"><a href="16.html" role="button">16 - Security & Compliance</a></div>
+        <div class="col-md-12"><a href="17.html" role="button">17 - Machine Learning</a></div>
+        <div class="col-md-12"><a href="18.html" role="button">18 - Account Management, Billing & Support</a></div>
+        <div class="col-md-12"><a href="19.html" role="button">19 - Advanced Identity</a></div>
+        <div class="col-md-12"><a href="20.html" role="button">20 - Other Services</a></div>
+        <div class="col-md-12"><a href="21.html" role="button">21 - AWS Architecting & Ecosystem</a></div>
+    </div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 ui image">
+    <p class="lead">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a role="button" class="" data-toggle="collapse" href="#question1">Question 1</a></h4>
+            </div>
+            <div id="question1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <p>A company would like to use their on-premises Microsoft Active Directory to connect to its AWS&nbsp;resources. Which service can it use?</p>
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">1</span>
+                                <label>
+                                    <input type="radio" name="answer1">
+                                    <p>Directory Services</p>
+                                </label>
+                            </div>
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">2</span>
+                                <label>
+                                    <input type="radio" name="answer1">
+                                    <p>Single Sign-On</p>
+                                </label>
+                            </div>
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">3</span>
+                                <label>
+                                    <input type="radio" name="answer1">
+                                    <p>Direct Connect</p>
+                                </label>
+                            </div>
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">4</span>
+                                <label>
+                                    <input type="radio" name="answer1">
+                                    <p>Cognito</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#answer1">Correct Answer</a></h4>
+                        </div>
+                        <div id="answer1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div style="display: flex; align-items: start">
+                                    <span class="badge" style="margin-right: 15px;">1</span>
+                                    <div>
+                                        <p>Directory Services</p>
+                                    </div>
+                                </div>
+                                <div class="alert" style="margin-bottom: 0;" role="alert">
+                                    <h4><strong><i class="fa fa-sticky-note-o" aria-hidden="true"></i> Explanation</strong></h4>
+                                    <div class="alert" role="alert" style="background-color: #E9FBE9;border-left: 8px solid #52E052; margin-bottom: 0;">
+                                        <p>AWS Directory Service makes it easy for you to setup and run directories in the AWS cloud, or connect your AWS resources with an existing on-premises Microsoft Active Directory. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a role="button" class="collapsed" data-toggle="collapse" href="#question2">Question 2</a></h4>
+            </div>
+            <div id="question2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <p>Which of the following services can help you manage multiple AWS accounts?</p>
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">1</span>
+                                <label>
+                                    <input type="radio" name="answer2">
+                                    <p>IAM</p>
+                                </label>
+                            </div>
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">2</span>
+                                <label>
+                                    <input type="radio" name="answer2">
+                                    <p>Directory Services</p>
+                                </label>
+                            </div>
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">3</span>
+                                <label>
+                                    <input type="radio" name="answer2">
+                                    <p>Organizations</p>
+                                </label>
+                            </div>
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">4</span>
+                                <label>
+                                    <input type="radio" name="answer2">
+                                    <p>Single Sign-On</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#answer2">Correct Answer</a></h4>
+                        </div>
+                        <div id="answer2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div style="display: flex; align-items: start">
+                                    <span class="badge" style="margin-right: 15px;">3</span>
+                                    <div>
+                                        <p>Organizations</p>
+                                    </div>
+                                </div>
+                                <div class="alert" style="margin-bottom: 0;" role="alert">
+                                    <h4><strong><i class="fa fa-sticky-note-o" aria-hidden="true"></i> Explanation</strong></h4>
+                                    <div class="alert" role="alert" style="background-color: #E9FBE9;border-left: 8px solid #52E052; margin-bottom: 0;">
+                                        <p>Organizations helps you to centrally manage billing; control access, compliance, and security; and share resources across your AWS accounts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a role="button" class="collapsed" data-toggle="collapse" href="#question3">Question 3</a></h4>
+            </div>
+            <div id="question3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <p>A company just created a new mobile application and wants to add a simple and secure user sign-up, sign-in, and access control. Which AWS&nbsp;service can it use?</p>
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">1</span>
+                                <label>
+                                    <input type="radio" name="answer3">
+                                    <p>IAM</p>
+                                </label>
+                            </div>
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">2</span>
+                                <label>
+                                    <input type="radio" name="answer3">
+                                    <p>Cognito</p>
+                                </label>
+                            </div>
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">3</span>
+                                <label>
+                                    <input type="radio" name="answer3">
+                                    <p>Directory Services</p>
+                                </label>
+                            </div>
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">4</span>
+                                <label>
+                                    <input type="radio" name="answer3">
+                                    <p>Single Sign-On</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#answer3">Correct Answer</a></h4>
+                        </div>
+                        <div id="answer3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div style="display: flex; align-items: start">
+                                    <span class="badge" style="margin-right: 15px;">2</span>
+                                    <div>
+                                        <p>Cognito</p>
+                                    </div>
+                                </div>
+                                <div class="alert" style="margin-bottom: 0;" role="alert">
+                                    <h4><strong><i class="fa fa-sticky-note-o" aria-hidden="true"></i> Explanation</strong></h4>
+                                    <div class="alert" role="alert" style="background-color: #E9FBE9;border-left: 8px solid #52E052; margin-bottom: 0;">
+                                        <p>Amazon Cognito lets you add user sign-up, sign-in, and access control to your web and mobile apps quickly and easily.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a role="button" class="collapsed" data-toggle="collapse" href="#question4">Question 4</a></h4>
+            </div>
+            <div id="question4" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <p>A company would like to centrally manage access to multiple AWS accounts and business applications. Which service can it use?</p>
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">1</span>
+                                <label>
+                                    <input type="radio" name="answer4">
+                                    <p>Organizations</p>
+                                </label>
+                            </div>
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">2</span>
+                                <label>
+                                    <input type="radio" name="answer4">
+                                    <p>Cognito</p>
+                                </label>
+                            </div>
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">3</span>
+                                <label>
+                                    <input type="radio" name="answer4">
+                                    <p>Directory Service</p>
+                                </label>
+                            </div>
+                            <div class="radio" style="display: flex; align-items: start">
+                                <span class="badge" style="margin-right: 15px;">4</span>
+                                <label>
+                                    <input type="radio" name="answer4">
+                                    <p>Single Sign-On</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#answer4">Correct Answer</a></h4>
+                        </div>
+                        <div id="answer4" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div style="display: flex; align-items: start">
+                                    <span class="badge" style="margin-right: 15px;">4</span>
+                                    <div>
+                                        <p>Single Sign-On</p>
+                                    </div>
+                                </div>
+                                <div class="alert" style="margin-bottom: 0;" role="alert">
+                                    <h4><strong><i class="fa fa-sticky-note-o" aria-hidden="true"></i> Explanation</strong></h4>
+                                    <div class="alert" role="alert" style="background-color: #E9FBE9;border-left: 8px solid #52E052; margin-bottom: 0;">
+                                        <p>AWS SSO is an AWS service that enables you to makes it easy to centrally manage access to multiple AWS accounts and business applications and provide users with single sign-on access to all their assigned accounts and applications from one place.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </p>
+</div>
+<div class="container help-block">
+    <div class="row">
+        <h3 class="text-center">
+            <a href="https://boolfalse.com" target="_blank" title="BoolFalse official website">BoolFalse</a>
+        </h3>
+        <div class="col-md-12">
+            <div class="pull-left">
+                <ul class="nav nav-pills list-inline text-center">
+                    <li role="presentation">
+                        <a title="GitHub" href="https://github.com/boolfalse">
+                            <i class="fa fa-github"></i> GitHub
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a title="LinkedIn" href="https://linkedin.com/in/boolfalse">
+                            <i class="fa fa-linkedin"></i> LinkedIn
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a title="YouTube" href="https://youtube.com/c/BoolFalse">
+                            <i class="fa fa-youtube"></i> YouTube
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-right">
+                <ul class="nav nav-pills list-inline text-center">
+                    <li role="presentation">
+                        <a title="boolfalse/aws-cloud-practitioner" href="https://github.com/boolfalse/aws-cloud-practitioner">
+                            ⭐ <strong>GitHub repo</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
